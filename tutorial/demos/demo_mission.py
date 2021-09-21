@@ -13,7 +13,7 @@ async def run():
     print("Waiting for drone to connect...")
     async for state in drone.core.connection_state():
         if state.is_connected:
-            print(f"Drone discovered with UUID: {state.uuid}")
+            #print(f"Drone discovered with UUID: {state.uuid}")
             break
 
     print("Waiting for drone to have a global position estimate...")
@@ -40,6 +40,8 @@ async def run():
                                      float('nan'),
                                      MissionItem.CameraAction.NONE,
                                      float('nan'),
+                                     float('nan'),
+                                     float('nan'),
                                      float('nan')))
     mission_items.append(MissionItem(home_lat + 0.0001,
                                      home_lon + 0.0001,
@@ -49,6 +51,8 @@ async def run():
                                      float('nan'),
                                      float('nan'),
                                      MissionItem.CameraAction.NONE,
+                                     float('nan'),
+                                     float('nan'),
                                      float('nan'),
                                      float('nan')))
     mission_items.append(MissionItem(home_lat + 0.0000,
@@ -60,6 +64,8 @@ async def run():
                                      float('nan'),
                                      MissionItem.CameraAction.NONE,
                                      float('nan'),
+                                     float('nan'),
+                                     float('nan'),
                                      float('nan')))
     mission_items.append(MissionItem(home_lat - 0.0001,
                                      home_lon + 0.0001,
@@ -69,6 +75,8 @@ async def run():
                                      float('nan'),
                                      float('nan'),
                                      MissionItem.CameraAction.NONE,
+                                     float('nan'),
+                                     float('nan'),
                                      float('nan'),
                                      float('nan')))
 
@@ -126,6 +134,8 @@ async def inject_pt(drone, mission_items, home_alt, home_lat, home_lon):
                                      float('nan'),
                                      float('nan'),
                                      MissionItem.CameraAction.NONE,
+                                     float('nan'),
+                                     float('nan'),
                                      float('nan'),
                                      float('nan')))
                 mission_plan = MissionPlan(mission_items)
