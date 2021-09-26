@@ -76,8 +76,9 @@ async def run():
         if(current_time % 1  == 0 and last_time < current_time):
             print(current_time)
             last_time = current_time
-
-
+        # main loop needs a small sleep to yield the CPU to async activity
+        await asyncio.sleep(0.01)
+    
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(run())
