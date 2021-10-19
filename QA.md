@@ -23,7 +23,7 @@ The following is a constantly updating question and answer page with common ques
 
 ## 1. How do I make a mission?
 
-The objective for you is to write an altitude selection algorithm, while the rest of the mission logistics are handled for you. To get started, use the [template mission using the mission construct](https://github.com/katabeta/lm-mit-momentum/blob/master/template_mission.py) or the [template mission using the goto_location construct](https://github.com/katabeta/lm-mit-momentum/blob/master/template_goto.py).
+The objective for you is to write an altitude selection algorithm, while the rest of the mission logistics are handled for you. To get started, use the [template mission using the mission construct](https://github.com/lmco/lm-mit-momentum/blob/master/template_mission.py) or the [template mission using the goto_location construct](https://github.com/lmco/lm-mit-momentum/blob/master/template_goto.py).
 
 If you already have something that's working or would prefer to work something out from scratch, you are welcome to continue using that as it will help with your creativity score.
 
@@ -44,11 +44,11 @@ Below are the pertitent values to your mission (relative to the origin of the te
 
 ## 3. How do I read LiDAR returns from code?
 
-Gazebo is the software that handles the sensor simulation and is the software that publishes the returns. The internal structure of the communication is implemented using [Protocol Buffers](https://developers.google.com/protocol-buffers) and you can listen for the messages using external software. This is what [Py3Gazebo](https://github.com/katabeta/lm-mit-momentum#8-install-py3gazebo) is for in our case.
+Gazebo is the software that handles the sensor simulation and is the software that publishes the returns. The internal structure of the communication is implemented using [Protocol Buffers](https://developers.google.com/protocol-buffers) and you can listen for the messages using external software. This is what [Py3Gazebo](https://github.com/lmco/lm-mit-momentum#8-install-py3gazebo) is for in our case.
 
-If you have successfully installed Py3Gazebo, you should be able to run the file [tutorial/demos/demo_lidar_read.py](https://github.com/katabeta/lm-mit-momentum/blob/master/tutorial/demos/demo_lidar_read.py), which will print out LiDAR readings every 5 seconds for 20 seconds total. You must have PX4 and Gazebo running with the LiDAR model enabled.
+If you have successfully installed Py3Gazebo, you should be able to run the file [tutorial/demos/demo_lidar_read.py](https://github.com/lmco/lm-mit-momentum/blob/master/tutorial/demos/demo_lidar_read.py), which will print out LiDAR readings every 5 seconds for 20 seconds total. You must have PX4 and Gazebo running with the LiDAR model enabled.
 
-To test your knowledge and understanding, please read along the [LaserScan tutorial](https://github.com/katabeta/lm-mit-momentum/blob/master/tutorial/tutorial_lidar.py) and help make it complete. By the end of the tutorial you should be more familiar with:
+To test your knowledge and understanding, please read along the [LaserScan tutorial](https://github.com/lmco/lm-mit-momentum/blob/master/tutorial/tutorial_lidar.py) and help make it complete. By the end of the tutorial you should be more familiar with:
 
 - Checking and acquiring more information on the published data from Gazebo
 - Looking at a "snapshot" from the published data from Gazebo
@@ -69,7 +69,7 @@ This LiDAR's FoV is defined as
 - Vertical: -90 to 0 degs, 10 deg increments, 0 degs points directly in front of vehicle, -90 degs points directly down
 - Range: 0.2 m to 10 m, with infinity indicating an unreturned ray
 
-For further information, check out the LiDAR definition in the [models/lidar/model.sdf](https://github.com/katabeta/lm-mit-momentum/blob/master/models/lmlidar/model.sdf) file, within the `<ray>` element.
+For further information, check out the LiDAR definition in the [models/lidar/model.sdf](https://github.com/lmco/lm-mit-momentum/blob/master/models/lmlidar/model.sdf) file, within the `<ray>` element.
 
 
 ## 5. What are the intensity returns from the LiDAR?
@@ -90,7 +90,7 @@ For more examples, check out the [MAVSDK examples](https://github.com/mavlink/MA
 
 The competition terrain is a wavy structure with active area dimensions of 40x40 m and a maximum height of 5 m. The terrain is positioned at 0 deg N, 0 deg W, at 0 m altitude. If you don't find that's the case for you, make sure you run `source set_home.sh` in the terminal before launching Gazebo and PX4.
 
-The terrain definition is located in [worlds/models/terrain2d/model.sdf](https://github.com/katabeta/lm-mit-momentum/blob/master/worlds/models/terrain2d/model.sdf) if you seek further information.
+The terrain definition is located in [worlds/models/terrain2d/model.sdf](https://github.com/lmco/lm-mit-momentum/blob/master/worlds/models/terrain2d/model.sdf) if you seek further information.
 
 **NOTE:** The heights in the terrain are defined by a heightmap. If the terrain you are working with does not match what is defined by the heightmap, make sure that you have pulled from this git repository and ran the setup script again. The terrain heightmap looks like this (black = 0m, white = 5m):
 
