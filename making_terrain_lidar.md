@@ -75,8 +75,8 @@ Summary of [Gazebo DEMs Tutorial](http://gazebosim.org/tutorials/?tut=dem):
 
 This entails a somewhat involved process consisting of
 
-1. Creating a sensor model in `.sdf` format for the lidar similar to what is done for the [lmlidar](https://github.com/katabeta/lm-mit-momentum/tree/master/models/lmlidar).
-2. Creating a vehicle model in `.sdf` format to include that lidar, even if that vehicle already exists in other iterations. An example of this is the [iris_lmlidar vehicle model](https://github.com/katabeta/lm-mit-momentum/commits/master/models/iris_lmlidar).
-3. Creating a ROMFS script formatted as `<number>_vehicle_name`. E.g. [1043_iris_lmlidar](https://github.com/katabeta/lm-mit-momentum/blob/master/ROMFS/1043_iris_lmlidar).
-4. Updating [line 94 of the cmake file](https://github.com/katabeta/lm-mit-momentum/blob/master/cmake/sitl_target.cmake#L94) with the name of your vehicle (specifically the one that includes your new lidar).
+1. Creating a sensor model in `.sdf` format for the lidar similar to what is done for the [lmlidar](https://github.com/lmco/lm-mit-momentum/tree/master/models/lmlidar).
+2. Creating a vehicle model in `.sdf` format to include that lidar, even if that vehicle already exists in other iterations. An example of this is the [iris_lmlidar vehicle model](https://github.com/lmco/lm-mit-momentum/commits/master/models/iris_lmlidar).
+3. Creating a ROMFS script formatted as `<number>_vehicle_name`. E.g. [1043_iris_lmlidar](https://github.com/lmco/lm-mit-momentum/blob/master/ROMFS/1043_iris_lmlidar).
+4. Updating [line 94 of the cmake file](https://github.com/lmco/lm-mit-momentum/blob/master/cmake/sitl_target.cmake#L94) with the name of your vehicle (specifically the one that includes your new lidar).
 5. Updating the setup script to copy your new models and ROMFS script into the right places in Gazebo and PX4.
