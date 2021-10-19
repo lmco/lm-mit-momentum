@@ -1,6 +1,6 @@
 # Getting Started <!-- omit in toc -->
 
-If you are viewing this file offline, the most up to date version of these instructions is located in the [project GitHub](https://github.com/katabeta/lm-mit-momentum).
+If you are viewing this file offline, the most up to date version of these instructions is located in the [project GitHub](https://github.com/lmco/lm-mit-momentum).
 
 ***ATTENTION STUDENTS:***  **THERE WAS AN UPDATE TO THE LIDAR REGISTRATION ALGORITHM**. If you are using the default templates or are relying on the LIDAR registration algorithm in them, the previous versions of these files contained a bug in the coordinate transforms. This bug has been fixed and you must update your files. Thanks to the student who pointed out the bug during office hours on 25 JAN.
 
@@ -9,7 +9,7 @@ If you are viewing this file offline, the most up to date version of these instr
 1. Unless otherwise specified, all instructions are to be entered into the terminal in your Ubuntu installation.
 2. Commands that start with `sudo` will require your user password. Using sudo invokes superuser security privileges and is akin to running an application as an administrator in Windows.
 3. There is a [playlist](https://youtube.com/playlist?list=PLvn3cENh89AszwCOFpApcvQNTHO7Ap-us) showing successful execution of these commands.
-4. If you have specific questions that are not answered by this document, check out the constantantly updating [Q&A](https://github.com/katabeta/lm-mit-momentum/blob/master/QA.md).
+4. If you have specific questions that are not answered by this document, check out the constantantly updating [Q&A](https://github.com/lmco/lm-mit-momentum/blob/master/QA.md).
 
 ## Table of Contents <!-- omit in toc -->
 <!-- TOC and section numbers automatically generated, do not manually edit -->
@@ -242,14 +242,14 @@ The Python library is not yet installed. LM is providing an updated `setup.py` s
 
 Based on this [forum post](https://discuss.px4.io/t/create-custom-model-for-sitl/6700/2).
 
-1. Download the LM provided assets from [this repository](https://github.com/katabeta/lm-mit-momentum) and place parallel to your PX4 top folder
+1. Download the LM provided assets from [this repository](https://github.com/lmco/lm-mit-momentum) and place parallel to your PX4 top folder
 
     ``` sh
     # Get into the project directory
     cd ~/Momentum
 
     # Clone project
-    git clone https://github.com/katabeta/lm-mit-momentum.git
+    git clone https://github.com/lmco/lm-mit-momentum.git
 
     # Check directory tree
     sudo apt-get install tree
@@ -289,7 +289,7 @@ Based on this [forum post](https://discuss.px4.io/t/create-custom-model-for-sitl
 
 ### 8.1. Creating your own terrain and LiDAR
 
-You should **not** need to create your own terrain or LiDAR for this project. If you are still looking for instruction on making your own assets, refer to [making_terrain_lidar.md](https://github.com/katabeta/lm-mit-momentum/blob/master/making_terrain_lidar.md).
+You should **not** need to create your own terrain or LiDAR for this project. If you are still looking for instruction on making your own assets, refer to [making_terrain_lidar.md](https://github.com/lmco/lm-mit-momentum/blob/master/making_terrain_lidar.md).
 
 ## 9. Install py3gazebo
 
@@ -463,7 +463,7 @@ gz topic -i /gazebo/default/iris_lmlidar/gps0/link/gps
 # Subscribers:
 ```
 
-Create a message subscriber class with a message callback and a way to poll the data when needed. Get your Gazebo Master IP-Address and Port from the following message when launching PX4 `[Msg] Connected to gazebo master @ http://127.0.0.1:11345`. The following is the same as in the file [demo_gps_read.py](https://github.com/katabeta/lm-mit-momentum/blob/master/demos/demo_gps_read.py).
+Create a message subscriber class with a message callback and a way to poll the data when needed. Get your Gazebo Master IP-Address and Port from the following message when launching PX4 `[Msg] Connected to gazebo master @ http://127.0.0.1:11345`. The following is the same as in the file [demo_gps_read.py](https://github.com/lmco/lm-mit-momentum/blob/master/demos/demo_gps_read.py).
 
 ``` python
 import time # For the example only
